@@ -36,21 +36,21 @@ const [time, setTime] = useState(new Date().toLocaleTimeString());
 
 useEffect(() => {
   const intervalID = setInterval(() => {
+    getCovidData()
     setTime(new Date().toLocaleTimeString());
   }, 1000);
   return () => clearInterval(intervalID);
 }, []);
 
-    useEffect(()=>{
-        getCovidData();
-    },[]);
+    // useEffect(()=>{
+    //     getCovidData();
+    // },[]);
   return (
     <>
     <section>
         <h1>🔴 LIVE</h1>
         <h2>COVID-19 CORONAVIRUS TRACKER</h2>
         <h2>{curday('/')}</h2>
-        <h2>TRACKER</h2>
         <h2>{time}</h2>
         <ul>
             <li className='card ca1'>
