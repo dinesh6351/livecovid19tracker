@@ -50,7 +50,7 @@ useEffect(() => {
         <h1>🔴 LIVE</h1>
         <h2>COVID-19 CORONAVIRUS TRACKER</h2>
         <h2>{curday('/')}</h2>
-     
+        <h2>TRACKER</h2>
         <h2>{time}</h2>
         <ul>
             <li className='card ca1'>
