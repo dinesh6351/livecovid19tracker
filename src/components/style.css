@@ -1,0 +1,69 @@
+body{
+    background-color: rgb(14, 4, 4);
+}
+
+h1,h2{
+    text-align: center;
+}
+
+h1{
+    transition: 0s;
+    transform: scale(1.1);
+
+}
+
+
+
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-flow: wrap;
+    
+}
+
+.ca1{
+    background-color:rgb(112, 86, 199);
+
+}
+.ca2{
+    background-color:rgb(197, 225, 73);
+
+}
+.ca3{
+    background-color:rgb(221, 18, 18);
+
+}
+.card{
+     width: calc(70%/3);
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+    transition: 0.3s;
+
+}
+
+.card:hover{
+    transform:scale(1.1);
+} 
+
+.card_name{
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.card_name span {
+    font-size: 15px;
+}
+
+.card_total {
+    font-size: 200%;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+
+}
+h1,h2,p{
+    color: white;
+}
