@@ -13,7 +13,23 @@ export const Covid = () => {
             console.log(error);
         }
     }
-        
+
+    var curday=function(sp){
+       const today =new Date();
+       var dd = today.getDate();
+var mm = today.getMonth()+1; //As January is 0.
+var yyyy = today.getFullYear();
+
+if(dd<10) dd='0'+dd;
+if(mm<10) mm='0'+mm;
+return (dd+sp+mm+sp+yyyy);
+    }
+function timeup(){
+const today =new Date();
+var output=today.toLocaleTimeString();
+return output;
+}
+setTimeout(timeup,1000)
     useEffect(()=>{
         getCovidData();
     },[]);
@@ -22,6 +38,9 @@ export const Covid = () => {
     <section>
         <h1>🔴 LIVE</h1>
         <h2>COVID-19 CORONAVIRUS TRACKER</h2>
+        <h2>{curday('/')}</h2>
+     
+        <h2>{timeup()}</h2>
         <ul>
             <li className='card ca1'>
             <div className="card_main">
@@ -77,6 +96,10 @@ export const Covid = () => {
             </li>
         </ul>
         </section>
+
     </>
-  )
+    
+ 
+   )
+   
 }
