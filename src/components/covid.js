@@ -14,6 +14,8 @@ export const Covid = () => {
         }
     }
 
+
+
     var curday=function(sp){
        const today =new Date();
        var dd = today.getDate();
@@ -29,7 +31,16 @@ const today =new Date();
 var output=today.toLocaleTimeString();
 return output;
 }
-setTimeout(timeup,1000)
+
+const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+useEffect(() => {
+  const intervalID = setInterval(() => {
+    setTime(new Date().toLocaleTimeString());
+  }, 1000);
+  return () => clearInterval(intervalID);
+}, []);
+
     useEffect(()=>{
         getCovidData();
     },[]);
@@ -40,7 +51,7 @@ setTimeout(timeup,1000)
         <h2>COVID-19 CORONAVIRUS TRACKER</h2>
         <h2>{curday('/')}</h2>
      
-        <h2>{timeup()}</h2>
+        <h2>{time}</h2>
         <ul>
             <li className='card ca1'>
             <div className="card_main">
